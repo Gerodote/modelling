@@ -1,0 +1,7 @@
+{
+  "name": "voloshuck-modelling-first",
+  "version-string": "0.1",
+  "dependencies": [
+    "eigen3"
+  ]
+}

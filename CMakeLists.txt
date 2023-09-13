@@ -5,8 +5,8 @@ cmake_minimum_required(VERSION 3.15)
 #
 
 project(
-  "Project"
-  VERSION 0.1.0
+  "modelling"
+  VERSION 0.0.1
   LANGUAGES CXX
 )
 
@@ -155,7 +155,9 @@ include(cmake/Doxygen.cmake)
 #
 # Model project dependencies
 #
+find_package(Eigen3 CONFIG REQUIRED)
 
+target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen)
 # Identify and link with the specific "packages" the project uses
 #find_package(package_name package_version REQUIRED package_type [other_options])
 #target_link_libraries(
