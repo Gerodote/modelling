@@ -27,7 +27,7 @@ jobs:
         key: ${{runner.os}}-dependencies
 
     - name: configure
-      run: cd modelling && cmake -Bbuild -DCMAKE_INSTALL_PREFIX="$HOME/$env:INSTALL_LOCATION" -Dmodelling_BUILD_EXECUTABLE=1 -Dmodelling_ENABLE_VCPKG=1 -Dmodelling_ENABLE_LTO=1
+      run: cmake -Bbuild -DCMAKE_INSTALL_PREFIX="$HOME/$env:INSTALL_LOCATION" -Dmodelling_BUILD_EXECUTABLE=1 -Dmodelling_ENABLE_VCPKG=1 -Dmodelling_ENABLE_LTO=1
       
     - name: build
       run: cmake --build build --config "$env:BUILD_TYPE" -j4
